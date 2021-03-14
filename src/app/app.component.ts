@@ -9,6 +9,12 @@ export class AppComponent {
   name: string;
   date: string;
   amount: string;
+  miles: string;
+  car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: '2010'
+  }
 
   onNameChangeHandler(value:string) {
     this.name = value;
@@ -18,7 +24,11 @@ export class AppComponent {
     this.date = value;
   }
 
-  onAmountChangehandler(value:string) {
+  onAmountChangeHandler(value:string) {
     this.amount = value;
+  }
+
+  onMilesChangeHandler(value: string) {
+    this.miles = value;
   }
 }

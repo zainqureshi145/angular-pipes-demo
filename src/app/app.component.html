@@ -11,8 +11,14 @@
       <input class="input" type="date" (input)="onDateChangeHandler($event.target.value)"/>
       <div class="box" *ngIf = "date">{{date | date: "fullDate"}}</div>
       <div class="field"><p>Enter amount</p></div>
-      <input class="input"type="text" (input)="onAmountChangehandler($event.target.value)"/>
+      <input class="input"type="text" (input)="onAmountChangeHandler($event.target.value)"/>
       <div class="box" *ngIf = "amount">{{amount | currency: 'PKR '}}</div>
+
+      <div class="field"><p>Enter Miles</p></div>
+      <input class="input"type="text" (input)="onMilesChangeHandler($event.target.value)"/>
+      <div class="box" *ngIf = "miles">{{miles | convert}} Kilometers</div>
     </div>
   </div>
 </div>
+
+<div>{{car | json}}</div>
