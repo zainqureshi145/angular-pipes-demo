@@ -16,7 +16,9 @@
 
       <div class="field"><p>Enter Miles</p></div>
       <input class="input"type="text" (input)="onMilesChangeHandler($event.target.value)"/>
-      <div class="box" *ngIf = "miles">{{miles | convert}} Kilometers</div>
+      <div class="box" *ngIf = "miles">{{miles | convert: 'km'}} Kilometers</div>
+      <!-- <div class="box" *ngIf = "(miles | convert: 'km') > 10">{{miles | convert 'km'}}</div>
+      <div class="box" *ngIf = "miles">{{miles | convert: 'cm' | number '1.0-2'}}</div> -->
     </div>
   </div>
 </div>
